@@ -1,0 +1,20 @@
+{
+  "name": "graphqlbasics",
+  "version": "1.0.0",
+  "description": "It's a simple graphql server based on plurasight https://app.pluralsight.com/player?course=graphql-scalable-apis",
+  "main": "index.js",
+  "scripts": {
+    "start": "node lib/index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "graphql": "^0.10.5",
+    "mongodb": "^2.1.18",
+    "pg": "^6.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
+  },
+  "author": "Jasdev Sidhu",
+  "license": "ISC"
+}
