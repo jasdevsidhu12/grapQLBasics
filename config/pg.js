@@ -1,5 +1,5 @@
 module.exports = {
     development: {
-        database: 'contest'
+        path: "postgres://postgres:root@localhost:5432/contests"
     }
 };
