@@ -1,3 +1,4 @@
+//--Make sure run this first --
 const { MongoClient } = require('mongodb');
 const assert = require('assert');
 const { nodeEnv } = require('../lib/util');

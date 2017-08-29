@@ -19,7 +19,7 @@ const RootQueryType = new GraphQLObjectType({
                 key: { type: new GraphQLNonNull(GraphQLString) }
             },
             resolve: (obj, args, { pgPool }) => { 
-                // obj represents field type
+                // obj represents the parent fields/field type
                 // args represents arguements
                 // ctx represents global object define in graphqlHTTP()
                 // ctx.pgPool is an example

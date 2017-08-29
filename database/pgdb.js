@@ -20,8 +20,21 @@ module.exports = (pgPool) => {
                 console.error(err);
             }
         },
-        getContests: (obj) => {
-            return [{id:"1",code:"ddd"},{id:"2",code:"ded"}];
+        getContests: (user) => {
+            return pgPool.query('select * from contests where created_by = $1', [user.id])
+            .then((res) => {
+                return res.rows.map((obj) => {
+                    return {
+                        id: obj.id,
+                        code: obj.code,
+                        title: obj.title,
+                        status: obj.status,
+                        createdAt: obj.created_at,
+                        createdBy: obj.created_by
+                    }
+                });
+            })
+            //  return [{id:"1",code:"ddd"},{id:"2",code:"ded"}];
         }
     }
 };
